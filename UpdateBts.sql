@@ -23,3 +23,16 @@ update bts.graConfiguration set propvalue = 'http://host:80/servicebridge' where
 ##########################################################################
 
 update bts.graConfiguration set propvalue = 'http://host:80/tags' where propkey like 'tags.url';
+
+##########################################################################
+# Delete graversion table form bts databases
+##########################################################################
+
+delete from bts.graversion;
+
+
+##########################################################################
+# Update kettle configuration to point to localhost in Win Dev Instance.
+##########################################################################
+
+UPDATE `comparedb`.`cc_accesscontrol` SET `accessURL`='http://localhost:80/admin/kettle/' WHERE `accessControl_Id`='1';
