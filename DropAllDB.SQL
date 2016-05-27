@@ -1,8 +1,9 @@
-drop database bts;
-drop database softlayer;
-drop database ods;
-drop database sds;
-drop database sfb;
-drop database tags;
-drop database pyscreener;
-drop database comparedb;
+DROP DATABASE [IF EXISTS] bts;
+DROP DATABASE [IF EXISTS] softlayer;
+DROP DATABASE [IF EXISTS] ods;
+DROP DATABASE [IF EXISTS] sds;
+DROP DATABASE [IF EXISTS] sfb;
+DROP DATABASE [IF EXISTS] tags;
+DROP DATABASE [IF EXISTS] pyscreener;
+DROP DATABASE [IF EXISTS] comparedb;
+DROP DATABASE [IF EXISTS] demo;
