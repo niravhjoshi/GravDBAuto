@@ -296,6 +296,20 @@ foreach ($objFile in $colFiles)
 
 
 
+foreach ($objFile in $colFiles)
+
+{		
+	#demo db import
+	if ($objFile.Name -match "cme")
+    {
+    Write-Host $objFile
+	cmd /c "mysql --user=root --password=gravitant cme   <" $objFile.FullName
+    }
+
+
+}
+
+
 #Update bts tables
 "
 #####################################################
