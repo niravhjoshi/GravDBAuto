@@ -6,4 +6,5 @@ create database sfb;
 create database tags;
 create database pyscreener;
 create database comparedb;
+create database cme;
 create database demo;
