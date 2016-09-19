@@ -147,6 +147,23 @@ if ($jboss)
                     Write-Host "I did not get any comparedb file"
                     }
 
+		
+            #Update bts tables
+            "
+            #####################################################
+            Updating bts database tables to values for local instance
+            #####################################################
+            "
+
+            &cmd /c "mysql --user=root --password=gravitant bts   <" UpdateBts.sql
+    
+
+            "
+            ##########################################################################################################
+            All tasks are done now just go ahead and restart jboss server from eclipse to start CM instance.
+            ##########################################################################################################
+            "
+	
 
 	
     }
