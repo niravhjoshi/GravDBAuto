@@ -147,7 +147,17 @@ if ($jboss)
                     Write-Host "I did not get any comparedb file"
                     }
 
-		
+		#jobdb database
+                if ($colFiles = Get-ChildItem C:\DBAutomation\DBDropFilesOnly -Filter *jobdb*)
+                    {
+                    Write-Host $colFiles
+	                cmd /c  "mysql --user=root --password=gravitant jobdb   <" $colFiles.FullName
+                    }
+                else
+                    {
+                    Write-Host "I did not get any jobdb file"
+                    }
+			
             #Update bts tables
             "
             #####################################################
@@ -305,7 +315,17 @@ else
                         Write-Host "I did not get any comparedb file"
                         }
           
-
+		   #jobdb database
+                    if ($colFiles = Get-ChildItem C:\DBAutomation\DBDropFilesOnly -Filter *jobdb*)
+                       {
+                        Write-Host $colFiles
+	                cmd /c  "mysql --user=root --password=gravitant jobdb   <" $colFiles.FullName
+                       }
+                    else
+                       {
+                        Write-Host "I did not get any jobdb file"
+                        }
+		
 
             #Update bts tables
             "
