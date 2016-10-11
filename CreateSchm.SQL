@@ -8,3 +8,4 @@ create database pyscreener;
 create database comparedb;
 create database cme;
 create database demo;
+create database jobdb;
